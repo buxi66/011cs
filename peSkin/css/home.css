@@ -1,0 +1,327 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+    font: 12px 微软雅黑, 宋体, Tahoma, Geneva, sans-serif;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-weight: normal;
+    font-style: normal;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+#header {
+    height: 80px; /* PC 端高度不变 */
+    width: 100%;
+    background: #FFF;
+    position: relative;
+    z-index: 1;
+}
+
+.top_in {
+    max-width: 1140px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    width: 355px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+}
+
+#header #nav {
+    display: inline;
+    float: left;
+}
+
+#header #nav li {
+    display: block;
+    float: left;
+    height: 80px;
+    position: relative;
+}
+
+#header ul li a {
+    display: block;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    color: #333;
+    font-size: 16px;
+    padding: 0 20px;
+    position: relative;
+    border-left: 1px solid #EEE;
+}
+
+#header #nav li a:hover {
+    color: #388ddf;
+    text-decoration: none;
+}
+
+#header #nav li a.mutl {
+    padding: 0 30px 0 20px;
+}
+
+#header #nav li a.last {
+    border-right: 1px solid #EEE;
+}
+
+#header #nav li a i {
+    position: absolute;
+    right: 15px;
+    top: 38px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #333 #fff #fff;
+    -moz-transition: -moz-transform .2s ease-in;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -o-transition: -o-transform .2s ease-in;
+    transition: transform .2s ease-in;
+    -moz-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+}
+
+#header #nav li a:hover i {
+    -moz-transform: rotate(180deg);
+    -moz-transform-origin: 50% 30%;
+    -webkit-transform: rotate(180deg);
+    -webkit-transform-origin: 50% 30%;
+    -o-transform: rotate(180deg);
+    -o-transform-origin: 50% 30%;
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+#header #nav ul {
+    position: absolute;
+    display: none;
+    top: 80px;
+    left: 0;
+    margin-left: 0;
+    border: 1px solid #EEE;
+}
+
+#header #nav ul li {
+    text-align: center;
+    display: block;
+    float: none;
+    background: #FFF;
+    height: 30px;
+    float: left;
+}
+
+#header #nav ul li.nobg {
+    background: none;
+}
+
+#header #nav ul li a {
+    color: #555;
+    font-size: 12px;
+    width: 74px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: left;
+    border: none;
+}
+
+#header #nav ul li a:hover {
+    text-decoration: none;
+    color: #2871d5;
+}
+
+#header #navline {
+    height: 3px;
+    width: 74px;
+    background: #2871d5;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    z-index: 9;
+}
+
+#footer {
+    height: 128px;
+    width: 100%;
+    background-color: #444546;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer img {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+#footer p {
+    text-align: center;
+    margin: 0;
+    color: #808181;
+    font-size: 14px; /* 可根据需要调整字体大小 */
+}
+
+#footer a {
+    color: #808181;
+    font-size: 14px;
+    padding: 0 0; /* 仅保留上下内边距，左右为0 */
+    transition: color .3s;
+    display: inline-block; /* 使padding对行内元素生效 */
+}
+
+#footer a:hover {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+#footer a:focus {
+    outline: 2px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+/* 移动端样式（768px 以下，可根据实际设备调整断点） */
+@media (max-width: 768px) {
+    #header {
+        height: auto; /* 移动端高度自适应 */
+    }
+    .top_in {
+        height: auto;
+        padding: 10px 0;
+    }
+    .logo {
+        float: none; /* 取消浮动，居中显示 */
+        text-align: center;
+        margin: 0 auto 15px;
+        width: auto; /* 宽度自适应 */
+    }
+    #header #nav {
+        float: none;
+        text-align: center;
+        padding: 0;
+    }
+#header #nav li {
+    float: left; 
+    width: 50%; 
+    box-sizing: border-box; 
+    box-shadow: 0 0 0 0.5px #EEE; /* 用阴影模拟细边框 */
+    text-align: center;
+    height: auto; 
+    padding: 0;
+    position: relative; /* 需添加定位 */
+}
+#header #nav li::after { /* 伪元素模拟相邻边框（若有需要） */
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.5px;
+    background: #EEE;
+}
+#header #nav li:last-child::after { /* 最后一个元素去掉右侧边框 */
+    display: none;
+}
+    #header ul li a {
+        float: none;
+        display: block;
+        height: auto;
+        line-height: normal;
+        font-size: 14px;
+        padding: 12px;
+        border: none;
+        text-decoration: none;
+    }
+    #header #nav li a:hover {
+        background: #f8f8f8; /* 悬停背景色 */
+        color: #388ddf;
+    }
+    #header #nav li a i,
+    #header #nav ul,
+    #header #navline {
+        display: none; /* 隐藏移动端无需元素 */
+    }
+}
